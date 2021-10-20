@@ -44,7 +44,7 @@ public class ProductService {
         return productRepository
                 .findById(id)
                 .flatMap(product1 -> {
-                    return product
+                    return  product
                             .flatMap(productDto -> {
                                 product1.setDescription(productDto.getDescription());
                                 product1.setPrice(productDto.getPrice());
